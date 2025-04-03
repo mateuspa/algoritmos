@@ -1,4 +1,8 @@
-saldo = 10000  # Saldo inicial da conta
+import os
+os.system("cls")
+
+# Saldo inicial da conta
+saldo = 0
 
 while True:
     print("\n===== CAIXA ELETRÔNICO FATEC =====")
@@ -7,27 +11,27 @@ while True:
     print("3 - Depósito")
     print("4 - Sair")
 
-    opcao = input("Escolha uma opção: ")
+    opcao = input("\nEscolha uma opção: ")
 
     match opcao:
         case "1":
-            print(f"Seu saldo atual é R$ {saldo:.2f}")
+            print(f"\n$$$$ Seu saldo atual é R$ {saldo:.2f} $$$$")
 
         case "2":
-            valor = float(input("Digite o valor para saque: "))
+            valor = float(input("Digite o valor para saque: R$ "))
             if valor > saldo:
-                print("Saldo insuficiente!")
+                print("\nSaldo insuficiente!")
             else:
                 saldo -= valor
-                print(f"Saque de R$ {valor:.2f} realizado. Novo saldo: R$ {saldo:.2f}")
+                print(f"\nSaque de R$ {valor:.2f} realizado.\n\n$$$$ Novo saldo: R$ {saldo:.2f} $$$$")
 
         case "3":
-            valor = float(input("Digite o valor para depósito: "))
+            valor = float(input("Digite o valor para depósito: R$ "))
             saldo += valor
-            print(f"Depósito de R$ {valor:.2f} realizado. Novo saldo: R$ {saldo:.2f}")
+            print(f"\nDepósito de R$ {valor:.2f} realizado.\n\n$$$$ Novo saldo: R$ {saldo:.2f} $$$$")
 
         case "4":
-            print("Saindo... Obrigado por utilizar nosso caixa eletrônico!")
+            print("\nSaindo... Obrigado por utilizar nosso caixa eletrônico!\n")
             break
 
         case _:
