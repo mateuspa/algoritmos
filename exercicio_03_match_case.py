@@ -28,5 +28,5 @@ while True:
         input("\nPressione ENTER para continuar")
         os.system("cls")
     except ValueError:
-        print("\nOpção Inválida!!!\n")
+        print("\nOpção Inválida!!! Digite 1, 2, 3 ou 4.\n")
         input("\nPressione ENTER para continuar")
