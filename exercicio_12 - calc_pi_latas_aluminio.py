@@ -8,15 +8,15 @@ def valor(n):
     valor_kilo_lata = 5 # valor em reais por kg de alumínio
     return valor_kilo_lata * peso(n) / 1000
 
-# função para calcular a quantidade de CO2 emitida por kg de alumínio
+# função para calcular a quantidade de CO2eq emitida por kg de alumínio produzido
 def co2(n):
-    co2_por_g = 4.2 # g de CO2 emitidos por g de alumínio
+    co2_por_g = 4.2 # g de CO2eq emitidos por g de alumínio
     return n * co2_por_g
 
 while True:
     try:
         print(f"\nCálculos para o PI - latas de alumínio\n")
-        opcao = int(input("Digite a opção para calcular: \n\n 1) O peso de uma quantidade de latas de alumínio\n 2) O valor (R$) de uma quantidade de latas de alumínio\n 3) A quantidade de CO2 por um peso de alumínio\n 4) Sair do programa\n\n Opção desejada: "))
+        opcao = int(input("Digite a opção para calcular: \n\n 1) O peso de uma quantidade de latas de alumínio\n 2) O valor (R$) de uma quantidade de latas de alumínio\n 3) A quantidade de CO2 emitido para produzir determinado peso de alumínio\n 4) Sair do programa\n\n Opção desejada: "))
         match opcao:
             case 1:
                 print ("\nCalculadora de peso de latas de alumínio\n")
